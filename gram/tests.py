@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 # Create your tests here.
 class TestProfile(TestCase):
     def setUp(self):
-        self.user = User(username='charles')
+        self.user = User(username='default')
         self.user.save()
 
         self.profile_test = Profile(id=1, name='image', profile_picture='default.jpg', bio='this is a test profile',
@@ -22,12 +22,12 @@ class TestProfile(TestCase):
 
 class TestPost(TestCase):
     def setUp(self):
-        self.profile_test = Profile(name='charles', user=User(username='mikey'))
+        self.profile_test = Profile(name='default', user=User(username='default-007'))
         self.profile_test.save()
 
         self.image_test = Post(image='default.png', name='test', caption='default test', user=self.profile_test)
 
-    def test_insatance(self):
+    def test_instance(self):
         self.assertTrue(isinstance(self.image_test, Post))
 
     def test_save_image(self):
@@ -39,3 +39,10 @@ class TestPost(TestCase):
         self.image_test.delete_image()
         after = Profile.objects.all()
         self.assertTrue(len(after) < 1)
+
+class TestComment(TestCase):
+    def setUp(self):
+        self.comment = Profile(name='default', user=User(username='default-007'))
+        self.comment.save()
+
+    #Test Instance
