@@ -75,14 +75,3 @@ class Comment(models.Model):
         return self.comment
 
 
-class Post(models.Model):
-    image = ImageField(blank=False, manual_crop="800x800")
-    name = models.CharField(max_length=144, blank=True, default="Post")
-    caption = models.TextField(blank=True)
-    date = models.DateTimeField(auto_now_add=True)
-    likes = models.IntegerField(default=0)
-    profile = models.ForeignKey(User)
-    comments = models.ManyToManyField(Comment)
-
-    def __str__(self):
-        return f"{self.name} - {self.caption}"
