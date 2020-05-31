@@ -6,14 +6,12 @@
                 <div class="instaicon mainicon d-block d-sm-none"></div>
             </a>
         </span>
-        <form class="mb-0 h1 ml-auto mr-auto" id="searchform" action="{% url 'search' %}">
+        <form class="mb-0 h1 ml-auto mr-auto" id="searchform" action="">
             <input name="search_user" autocomplete="off" id="searching" class="form-control d-none d-md-block"
                 placeholder="Search">
             <i class="spinner "></i>
         </form>
         <span class="pull-right">
-            <div class="instaicon disc"></div>
-            <div class="instaicon like"></div>
             <a href="{% url 'profile' user.username %}" class="instaicon pers"></a>
         </span>
     </nav>
