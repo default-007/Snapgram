@@ -2,7 +2,9 @@ astroid==2.4.1
 bootstrap4==0.1.0
 certifi==2020.4.5.1
 chardet==3.0.4
+confusable-homoglyphs==3.2.0
 Django==1.11.17
+django-registration==2.4.1
 idna==2.9
 isort==4.3.21
 lazy-object-proxy==1.4.3
