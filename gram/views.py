@@ -175,3 +175,19 @@ def like_post(request):
     if request.is_ajax():
         html = render_to_string('gram_temp/like_section.html', params, request=request)
         return JsonResponse({'form': html})
+
+@login_required(login_url='login')
+def search_profile(request):
+    if 'search_user' in request.GET and request.GET['search_user']:
+        name = request.GET.get("search_user")
+        results = Profile.search_profile(name)
+        print(results)
+        message = f'name'
+        params = {
+            'results': results,
+            'message': message
+        }
+        return render(request, 'gram_temp/results.html', params)
+    else:
+        message = "You haven't searched for any image category"
+    return render(request, 'gram_temp/results.html', {'message': message})
