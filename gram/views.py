@@ -45,6 +45,7 @@ def index(request):
     }
     return render(request, 'gram_temp/index.html', params)
 
+
 @login_required(login_url='login')
 def profile(request, username):
     images = request.user.profile.posts.all()
@@ -65,6 +66,7 @@ def profile(request, username):
 
     }
     return render(request, 'gram_temp/profile.html', params)
+
 
 @login_required(login_url='login')
 def user_profile(request, username):
@@ -88,6 +90,7 @@ def user_profile(request, username):
     }
     print(followers)
     return render(request, 'gram_temp/user_profile.html', params)
+
 
 @login_required(login_url='login')
 def post_comment(request, id):

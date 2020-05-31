@@ -1,0 +1,148 @@
+@media only screen and (max-width: 475px){
+    .download{
+        width:45%;
+        display:flex;
+        flex-direction:row;
+        display:inline;
+    }
+    #insta{
+        height:60%;
+    }
+
+}
+
+h1{
+    color:green;
+}
+.form-text, .asteriskField{
+    display:none;
+}
+.reg{
+    background-color:#f9f9f9;
+}
+.alert{
+    margin:0;
+    padding:0;
+}
+.alert ul li {
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    font-size:12px;
+}
+.navbar{
+    background-color:white;
+}
+.instaicon{
+    display: inline-block;
+    background-image: url(/static/images/96319a506a03.png);
+    padding:0px;
+}
+.instaglyph{
+    display: inline-block;
+    background-image: url(/static/images/868a059b8fc8.png);
+    margin:8px;
+}
+.modal-body a{
+    text-decoration:none;
+    color:black;
+    text-align:center;
+}
+.hearticon{
+    color:black;
+    font-size:30px;
+    margin-left:-10px;
+    margin-right:-10px;
+}
+.viewall a{
+    text-decoration:none;
+    color:grey;
+}
+.disc{
+    background-position: -458px -250px;
+    width: 24px;
+    height: 24px;
+}
+.like{
+    background-position: -458px -328px;
+    height: 24px;
+    width: 24px;
+    margin-left: 30px;
+}
+.pers{
+    background-position: -157px -357px;
+    height: 24px;
+    width: 24px;
+    margin-left: 30px;
+}
+.logo{
+    background-position: -98px -203px;
+    height: 35px;
+    width: 176px;
+}
+.mainicon{
+    background-position: -401px -388px;
+    height: 30px;
+    width: 30px;
+    margin-right: 146px;
+}
+.main{
+    margin-top:5%;
+}
+body{
+    background-color:#f9f9f9;
+}
+
+.account-img {
+    height: 165px;
+    width: 165px;
+}
+.user-img {
+    height: 55px;
+    width: 55px;
+    margin-top:25px;
+}
+.inname{
+    font-size:14px;
+}
+.user-details{
+    margin-left:-30px;
+}
+.userinfo{
+    margin-top:24px;
+}
+.username{
+    font-size:30px;
+}
+#cog{
+    font-size:24px;
+}
+.card-body{
+    margin:0px;
+    padding:0px;
+}
+.user{
+    color:black;
+}
+.user a:hover{
+    text-decoration:none;
+}
+.col-form-label{
+    font-size:14;
+}
+#overlay{
+    display: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(37, 36, 36, 0.456);
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    padding-top: 30%;
+}
+.card:hover #overlay{
+    display: block;
+
+}

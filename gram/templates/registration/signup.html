@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
-{% load crispy_forms_tags %}
 {% block content %}
 {% load static %}
 <div class="container mt-4">
     <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
             <div class="card">
                 <div class="card-title mt-4">
                     <img src="{% static 'images/insta5.png' %}" alt="" width="40%" class="D-block mx-auto">
@@ -15,7 +14,7 @@
                     </p>
                     <form action="" method="post" novalidate>
                         {% csrf_token%}
-                        {{ form|crispy}}
+
                         <button type="submit" class="btn btn-primary btn-sm"> Sign up</button>
                     </form>
                 </div>
@@ -42,7 +41,7 @@
             </div>
         </div>
 
-        <div class="col-md-4"></div>
+        <div class="col-md-3"></div>
     </div>
 </div>
 
