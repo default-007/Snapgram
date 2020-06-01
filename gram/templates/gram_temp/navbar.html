@@ -6,9 +6,9 @@
                 <div class="instaicon mainicon d-block d-sm-none"></div>
             </a>
         </span>
-        <form class="mb-0 h1 ml-auto mr-auto" id="searchform" action="">
+        <form class="mb-0 h1 ml-auto mr-auto" id="searchform" action="{% url 'search' %}">
             <input name="search_user" autocomplete="off" id="searching" class="form-control d-none d-md-block"
-                placeholder="Search">
+                placeholder="Search User">
             <i class="spinner "></i>
         </form>
         <span class="pull-right">
