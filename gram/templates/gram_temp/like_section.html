@@ -1,4 +1,4 @@
-<form action="{% url 'liked' image.id %}" method="post">
+<form class="float-left" action="{% url 'liked' image.id %}" method="post">
     {% csrf_token %}
     {% if is_liked %}
     <button class="btn btn-sm" type="submit" id="like" name="image_id" value="{{image.id}}"><i
@@ -10,4 +10,4 @@
     </button>
     {% endif %}
 </form>
-<span class="">{{ total_likes }} like{{ total_likes | pluralize}}</span>
+<span>{{ total_likes }} like{{ total_likes | pluralize}}</span>
