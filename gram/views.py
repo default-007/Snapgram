@@ -118,45 +118,6 @@ def post_comment(request, id):
     }
     return render(request, 'gram_temp/single_post.html', params)
 
-class PostLikeToggle(RedirectView):
-    def get_redirect_url(self, *args, **kwargs):
-        id = self.kwargs.get('id')
-        print(id)
-        obj = get_object_or_404(Post, pk=id)
-        url_ = obj.get_absolute_url()
-        user = self.request.user
-        if user in obj.likes.all():
-            obj.likes.remove(user)
-        else:
-            obj.likes.add(user)
-        return url_
-
-class PostLikeAPIToggle(APIView):
-    authentication_classes = [authentication.SessionAuthentication]
-    permission_classes = [permissions.IsAuthenticated]
-
-    def get(self, request, id=None, format=None):
-        # id = self.kwargs.get('id')
-        obj = get_object_or_404(Post, pk=id)
-        url_ = obj.get_absolute_url()
-        user = self.request.user
-        updated = False
-        liked = False
-        if user in obj.likes.all():
-            liked = False
-            obj.likes.remove(user)
-        else:
-            liked = True
-            obj.likes.add(user)
-        updated = True
-        data = {
-
-            'updated': updated,
-            'liked': liked,
-        }
-        print(data)
-        return Response(data)
-
 
 def like_post(request):
     # image = get_object_or_404(Post, id=request.POST.get('image_id'))

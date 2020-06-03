@@ -1,18 +1,26 @@
-<div class="navbar fixed-top bg-white">
-    <nav class="container">
-        <span class="navbar-brand mb-0 h1">
-            <a href="/">
-                <div id="brand" class="instaicon logo d-none d-sm-block"></div>
-                <div class="instaicon mainicon d-block d-sm-none"></div>
-            </a>
-        </span>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d1d7e0; color: #803bb1;">
+    <a class="navbar-brand" style="color: #803bb1;" href="/">Snapgram</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" style="color: #803bb1;" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" style="color: #803bb1;">
+            <li class="nav-item active">
+                <a class="nav-link" style="color: #803bb1;" href="/"><i class="fa fa-home" style="font-size:24px"
+                        aria-hidden="true"></i> Home
+                    <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
         <form class="mb-0 h1 ml-auto mr-auto" id="searchform" action="{% url 'search' %}">
             <input name="search_user" autocomplete="off" id="searching" class="form-control d-none d-md-block"
                 placeholder="Search User">
-            <i class="spinner "></i>
         </form>
         <span class="pull-right">
-            <a href="{% url 'profile' user.username %}" class="instaicon pers"></a>
+            <a style="color: #803bb1;" href="{% url 'profile' user.username %}"><i class="fa fa-user-circle-o"
+                    style="font-size:24px" aria-hidden="true"></i> Profile</a>
         </span>
-    </nav>
-</div>
+    </div>
+
+</nav>

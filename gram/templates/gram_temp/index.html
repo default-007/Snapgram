@@ -3,7 +3,7 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<div class="container-fluid" style="margin-top:7%;">
+<div class="container" style="margin-top:2%;">
     <div class="row">
         <div class="col">
             <div class="row">
@@ -14,13 +14,13 @@
                     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
-                            <div class="modal-header">
+                            <div class="modal-header" style="background-color: #564f6f;">
                                 <h5 class="modal-title" id="exampleModalLongTitle">Image Upload</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body" style="background-color: #d1d7e0;">
                                 <form action="" method="post" enctype="multipart/form-data" novalidate>
                                     {% csrf_token %}
                                     {{ form|crispy }}
@@ -36,11 +36,12 @@
             </div>
 
             {% for image in images %}
-            <div class="card mb-4">
+            <div class="card mb-4" style="background-color: #d1d7e0;">
                 <div class="card-title">
                     <img src="{{image.user.profile_picture.url}}" class="rounded-circle border ml-3 mt-2  mr-3"
                         alt="{{image.user.user.username}}" width="35" height="35">
                     <a href="{% url 'user_profile' image.user.user.username  %}"
+                        style="color: #802bb1; font-weight: bold;"
                         class="mt-4 user">{{image.user.user.username|title}}</a>
                 </div>
                 <div class="card-body">
@@ -50,19 +51,19 @@
 
                         </div>
                     </a>
-                    <p style="margin-left: 2%;"><span></span>{{image.caption}} </p>
+                    <p style="margin-left: 2%; color: #564f6f;"><span></span>{{image.caption}} </p>
                 </div>
                 <div class="iconic ml-2">
                     <button class="btn btn-sm" type="submit" name="image_id" value="{{image.id}}">
-                        <a href="{% url 'comment' image.id %}"><i class="far fa-heart hearticon mx-auto"
-                                aria-hidden="true"></i></a>
+                        <a href="{% url 'comment' image.id %}"><i class="fa fa-heart hearticon mx-auto"
+                                style="color: #802bb1;" aria-hidden="true"></i></a>
                     </button>
-                    <span class="ml-4 mb-1  mr-5"><strong>{{image.likes.count}}
+                    <span class="ml-4 mb-1  mr-5" style="color: #802bb1;"><strong>{{image.likes.count}}
                             like{{image.likes.count|pluralize}}</strong></span>
                 </div>
                 <div class="iconic ml-2">
                     <button class="btn btn-sm" type="submit"><a href="{% url 'comment' image.id %}"><i
-                                class="far fa-comment hearticon mx-auto" aria-hidden="true"></i>
+                                class="fa fa-comment hearticon mx-auto" style="color: #802bb1;" aria-hidden="true"></i>
                         </a></button>
                     <span class="text-secondary ml-4 viewall"><a href="{% url 'comment' image.id %}">view all
                             {{image.comments.count}} comment{{image.comments.count|pluralize}}</a></span>
@@ -99,8 +100,8 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <div class="card mt-4 mr-2 ml-2">
-                        <div class="card-title text-secondary mt-2 mr-2 ml-2 ">Suggestions</div>
+                    <div class="card mt-4 mr-2 ml-2" style="background-color: #564f6f;">
+                        <div class="card-title mt-2 mr-2 ml-2 " style="color: #d1d7e0;">Suggestions</div>
                         {% for user in users %}
                         <div class="container">
                             <div class="row">
