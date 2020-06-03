@@ -13,6 +13,14 @@
 h1 {
   color: green;
 }
+h2 {
+  font-family: "Sonsie One", cursive;
+}
+.navbar-brand {
+  font-family: "Sonsie One", cursive;
+  font-weight: bolder;
+  font-size: x-large;
+}
 .form-text,
 .asteriskField {
   display: none;
@@ -87,6 +95,7 @@ h1 {
 body {
   background-color: #2d283e;
   color: #d1d7e0;
+  font-family: "Marko One", serif;
 }
 
 .account-img {

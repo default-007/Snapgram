@@ -73,8 +73,8 @@
                 <div class="allcomments mb-4">
                     {% for comment in image.comments.all|slice:'2' %}
                     <div class="comment">
-                        <div class="ml-4"><strong>{{ comment.user.user.username }}</strong> <span
-                                class="text-secondary">{{ comment.comment }}</span>
+                        <div class="ml-4"><strong style="color: #564f6f;">{{ comment.user.user.username }}</strong>
+                            <span class="text-secondary">{{ comment.comment }}</span>
                         </div>
                     </div>
                     {% empty %}
