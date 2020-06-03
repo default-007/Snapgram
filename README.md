@@ -26,10 +26,10 @@ Click [View Site](https://snapgram-007.herokuapp.com/) to visit the site
 
 ###### Home page
 
-<img src="https://raw.githubusercontent.com/default-007/insta-lite/master/static/images/instagram.png">
+<img src="https://raw.githubusercontent.com/default-007/Snapgram/master/static/images/instagram.png">
  
  ###### user profile
- <img src="https://raw.githubusercontent.com/default-007/insta-lite/master/static/images/profile.png">
+ <img src="https://raw.githubusercontent.com/default-007/Snapgram/master/static/images/profile.png">
 
 ## User Story
 
@@ -109,10 +109,8 @@ Open the application on your browser `127.0.0.1:8000`.
 - HTML5
 - CSS3
 - Javascript
-- jQuery 3.4.1
 - Bootstrap 4.3.1
 - Font-Awesome
-- Restful API
 
 ## Known Bugs
 
