@@ -28,8 +28,8 @@ Click [View Site](https://snapgram-007.herokuapp.com/) to visit the site
 
 <img src="https://raw.githubusercontent.com/default-007/Snapgram/master/static/images/instagram.png">
  
- ###### user profile
- <img src="https://raw.githubusercontent.com/default-007/Snapgram/master/static/images/profile.png">
+###### user profile
+<img src="https://raw.githubusercontent.com/default-007/Snapgram/master/static/images/profile.png">
 
 ## User Story
 
